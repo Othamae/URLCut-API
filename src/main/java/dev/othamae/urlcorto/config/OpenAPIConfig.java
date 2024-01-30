@@ -21,7 +21,7 @@ public class OpenAPIConfig {
         return new OpenAPI()
                 .info(new Info()
                         .title("URLCorto API")
-                        .description("URL shortener API")
+                        .description("URL shortener API and QRCode generator")
                         .version("v1.0")
                         .contact(new Contact()
                                 .name("Othamae")
