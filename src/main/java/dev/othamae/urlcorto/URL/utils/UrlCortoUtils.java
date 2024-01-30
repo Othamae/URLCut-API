@@ -1,4 +1,4 @@
-package dev.othamae.urlcorto.utils;
+package dev.othamae.urlcorto.URL.utils;
 
 import java.nio.charset.StandardCharsets;
 

@@ -1,4 +1,4 @@
-package dev.othamae.urlcorto.model;
+package dev.othamae.urlcorto.URL.model;
 
 import java.util.Date;
 

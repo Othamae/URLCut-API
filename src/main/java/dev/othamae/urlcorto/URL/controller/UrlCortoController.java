@@ -1,4 +1,4 @@
-package dev.othamae.urlcorto.controller;
+package dev.othamae.urlcorto.URL.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import dev.othamae.urlcorto.dto.UrlRequest;
-import dev.othamae.urlcorto.dto.UrlResponse;
-import dev.othamae.urlcorto.service.UrlcortoService;
+import dev.othamae.urlcorto.URL.dto.UrlRequest;
+import dev.othamae.urlcorto.URL.dto.UrlResponse;
+import dev.othamae.urlcorto.URL.service.UrlcortoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

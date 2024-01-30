@@ -1,7 +1,7 @@
-package dev.othamae.urlcorto.utils;
+package dev.othamae.urlcorto.URL.utils;
 
-import dev.othamae.urlcorto.dto.UrlResponse;
-import dev.othamae.urlcorto.model.UrlCorto;
+import dev.othamae.urlcorto.URL.dto.UrlResponse;
+import dev.othamae.urlcorto.URL.model.UrlCorto;
 
 public class UrlMapper {
 

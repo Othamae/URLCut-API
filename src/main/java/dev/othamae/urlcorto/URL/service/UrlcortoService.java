@@ -1,4 +1,4 @@
-package dev.othamae.urlcorto.service;
+package dev.othamae.urlcorto.URL.service;
 
 import java.net.URI;
 import java.util.Date;
@@ -9,12 +9,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import dev.othamae.urlcorto.dto.UrlRequest;
-import dev.othamae.urlcorto.dto.UrlResponse;
-import dev.othamae.urlcorto.model.UrlCorto;
-import dev.othamae.urlcorto.repository.UrlcortoRepository;
-import dev.othamae.urlcorto.utils.UrlCortoUtils;
-import dev.othamae.urlcorto.utils.UrlMapper;
+import dev.othamae.urlcorto.URL.dto.UrlRequest;
+import dev.othamae.urlcorto.URL.dto.UrlResponse;
+import dev.othamae.urlcorto.URL.model.UrlCorto;
+import dev.othamae.urlcorto.URL.repository.UrlcortoRepository;
+import dev.othamae.urlcorto.URL.utils.UrlCortoUtils;
+import dev.othamae.urlcorto.URL.utils.UrlMapper;
 
 @Service
 public class UrlcortoService {
