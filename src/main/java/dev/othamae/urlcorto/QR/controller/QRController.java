@@ -5,7 +5,8 @@ import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,8 +24,8 @@ public class QRController {
     @Autowired
     QRService qrService;
 
-    @GetMapping(value = "", produces = MediaType.IMAGE_PNG_VALUE)
-    public ResponseEntity<byte[]> getQRCode(QRRequest qrRequest) throws IOException, WriterException {
+    @PostMapping(value = "", produces = MediaType.IMAGE_PNG_VALUE)
+    public ResponseEntity<byte[]> getQRCode(@RequestBody QRRequest qrRequest) throws IOException, WriterException {
         return qrService.sendQRCode(qrRequest.getLongUrl());
     }
 }
