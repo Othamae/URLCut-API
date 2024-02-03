@@ -1,6 +1,6 @@
-# URLCut
+# URLCut-API
 
-URLCut is a backend application for shortening URLs and QR code generation.
+URLCut-API is a backend application for shortening URLs and QR code generation.
 
 ## Description
 
@@ -43,3 +43,4 @@ The application should start and be available at http://localhost:8080.
 ## Swagger
 
 You can access the API documentation at http://localhost:8080/swagger-ui/index.html
+
