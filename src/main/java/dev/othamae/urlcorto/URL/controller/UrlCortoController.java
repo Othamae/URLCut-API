@@ -1,6 +1,9 @@
 package dev.othamae.urlcorto.URL.controller;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,12 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 import dev.othamae.urlcorto.URL.dto.UrlRequest;
 import dev.othamae.urlcorto.URL.dto.UrlResponse;
 import dev.othamae.urlcorto.URL.service.UrlcortoService;
+import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletResponse;
 
 @Tag(name = "UrlCorto", description = "URL shortener generator")
 @RestController
@@ -28,6 +33,9 @@ public class UrlCortoController {
 
     @Autowired
     private UrlcortoService urlcortoService;
+
+    @Value("${HOME_PAGE}")
+    private String homePage;
 
     @GetMapping("/{key}")
     public ResponseEntity<Void> getUrl(@PathVariable String key) {
@@ -44,6 +52,12 @@ public class UrlCortoController {
     @ResponseStatus(HttpStatus.CREATED)
     public UrlResponse addUrl(@RequestBody UrlRequest urlRequest) {
         return urlcortoService.createUrlCorto(urlRequest);
+    }
+
+    @Hidden
+    @GetMapping("")
+    public void redirectToHomePage(HttpServletResponse response) throws IOException {
+        response.sendRedirect(homePage);
     }
 
 }
