@@ -25,7 +25,7 @@ public class OpenAPIConfig {
         return new OpenAPI()
                 .addServersItem(new Server().url(devUrl))
                 .info(new Info()
-                        .title("URLCorto API")
+                        .title("URLCut API")
                         .description("URL shortener API and QRCode generator")
                         .version("v1.0")
                         .contact(new Contact()
