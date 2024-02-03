@@ -1,6 +1,6 @@
-# URLCorto
+# URLCut
 
-URLCorto is a backend application for shortening URLs and QR code generation.
+URLCut is a backend application for shortening URLs and QR code generation.
 
 ## Description
 
