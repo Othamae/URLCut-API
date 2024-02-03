@@ -17,6 +17,9 @@ public class OpenAPIConfig {
     @Value("${DEV_URL}")
     private String devUrl;
 
+    @Value("${DEV_WEB}")
+    private String devWeb;
+
     @Bean
     public OpenAPI openAPI() {
         return new OpenAPI()
@@ -28,7 +31,7 @@ public class OpenAPIConfig {
                         .contact(new Contact()
                                 .name("Othamae")
                                 .email("info@othamae.dev")
-                                .url("othamae.dev")));
+                                .url(devWeb)));
     }
 
     @Bean
