@@ -9,16 +9,18 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.servers.Server;
 
 @Configuration
 public class OpenAPIConfig {
 
-    @Value("http://localhost:8080")
+    @Value("${DEV_URL}")
     private String devUrl;
 
     @Bean
     public OpenAPI openAPI() {
         return new OpenAPI()
+                .addServersItem(new Server().url(devUrl))
                 .info(new Info()
                         .title("URLCorto API")
                         .description("URL shortener API and QRCode generator")
